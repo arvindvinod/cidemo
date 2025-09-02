@@ -17,6 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: cargo build --verbose
+      run: |
+	echo "this is my message"
+      	cargo build --verbose
+	exit 11
     - name: Run tests
       run: cargo test --verbose
